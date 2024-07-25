@@ -7,13 +7,13 @@ const sendButton = document.getElementById('sendButton');
 
 sendButton.addEventListener('click', (event) => {
 event.preventDefault();
-const message = 'Имя клиента: ' + sendName.value + ' Вопрос по заявке: ' + messageInput.value + " " + ' Номер телефона: ' + " " + sendTel.value;
+const message = 'Имя клиента: ' + sendName.value + '\nВопрос по заявке: ' + messageInput.value + " " + '\nНомер телефона: ' + " " + sendTel.value;
 if (message) {
 axios.post(`${URL_API}bot${token}/sendMessage`, {
 chat_id: chatId,
 text: message,
 })
-.then(response => console.log(response), alert('Ваше сообщение:' + ' ' + messageInput.value + ' ' + 'Ваш телефон:' + ' ' + sendTel.value))
+.then(response => console.log(response), alert('Ваше сообщение успешно отправлено!✅ \nМы обязательно свяжемся с вами! \nСпасибо!💚'))
 .catch(error => console.error(error));
 }
 });
