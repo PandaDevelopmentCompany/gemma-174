@@ -380,7 +380,7 @@
 						<div class="subscription-form">
 							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Оставьте свою заявку</span></h3>
 
-							<form action="#" class="row g-3">
+						<!-- 	<form action="#" class="row g-3">
 								<div class="col-auto">
 									<input type="text" class="form-control" placeholder="Введите ваше имя">
 								</div>
@@ -392,11 +392,28 @@
 										<span class="fa fa-paper-plane"></span>
 									</button>
 								</div>
-							</form>
+							</form> -->
 
 
+                <form action="#" class="row g-3">
+                  <div class="col-auto">
+                  <textarea class="form-control" id="messageInput" cols="80"
+                  rows="5" placeholder="Пожалуйста, задайте свой вопрос!"></textarea>
+                </div>
+                <div class="col-auto">
+                  <input id="sendName" type="name" class="form-control" placeholder="Введите ваше имя">
+                </div>
+                <div class="col-auto">
+                  <input id="sendTel" type="tel" class="form-control" placeholder="Введите номер телефона">
+                </div>
+                <div class="col-auto">
+                  <button id="sendButton" class="btn btn-primary">
+                    <span class="fa fa-paper-plane"></span>
+                  </button>
+                </div>
+              </form>
 
-              
+
 
 						</div>
 					</div>
@@ -461,6 +478,8 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+    <script src="js/form.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>; 
 	</body>
 
 </html>
